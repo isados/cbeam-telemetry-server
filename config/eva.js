@@ -9,7 +9,11 @@ eva.addMeasurement('temperature', 'EVA1.temp', [
     min: 0,
     max: 100
   }
-]);
+], {
+  topic: 'eva/temperature/1',
+  timeseries: 'Temperature1',
+  persist: true
+});
 eva.addMeasurement('luminosity', 'EVA1.lum', [
   {
     units: 'points',
@@ -17,7 +21,11 @@ eva.addMeasurement('luminosity', 'EVA1.lum', [
     min: 0,
     max: 255
   }
-]);
+], {
+  topic: 'bitraf/luminosity/1',
+  timeseries: 'Luminosity1',
+  persist: true
+});
 eva.addMeasurement('hall', 'EVA1.hall', [
   {
     units: 'points',
@@ -25,7 +33,11 @@ eva.addMeasurement('hall', 'EVA1.hall', [
     min: 0,
     max: 255
   }
-]);
+], {
+  topic: 'bitraf/hall/1',
+  timeseries: 'Hall1',
+  persist: true
+});
 eva.addMeasurement('counter', 'EVA1.cnt', [
   {
     units: 'points',
@@ -33,7 +45,11 @@ eva.addMeasurement('counter', 'EVA1.cnt', [
     min: 0,
     max: 255
   }
-]);
+], {
+  topic: 'bitraf/counter/1',
+  timeseries: 'Counter1',
+  persist: true
+});
 
 // Start the server
 var server = new app.Server({

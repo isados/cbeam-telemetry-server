@@ -13,12 +13,11 @@ services:
       - '127.0.0.1:8086:8086'
   openmct:
     image: cbase/cbeam-telemetry-server
-    build: .
     container_name: cbeam-telemetry-server
     environment:
       MSGFLO_BROKER: 'mqtt://mqtt:1883'
       INFLUX_HOST: influxdb
-      OPENMCT_CONFIG: eva.js
+      OPENMCT_CONFIG: c-base.js
     ports:
       - '127.0.0.1:8080:8080'
       - '127.0.0.1:8082:8082'
